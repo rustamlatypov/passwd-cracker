@@ -19,7 +19,7 @@ Built with Python 3.7.2 using
 In `/scripts` use `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 
 - `attacktype` <br/>
-The attack type used. Choices: `d:dictionary`, `h:hybrid`.
+The attack type used, choices: `d:dictionary`, `h:hybrid`.
 - `hashfile` <br/>
 The name of the .txt file in `/res` containing the salts and the hexadecimal representation of the hashes, e.g.,  `35501f52a4652dea:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559`, on each line.
 - `wordfile` <br/>
