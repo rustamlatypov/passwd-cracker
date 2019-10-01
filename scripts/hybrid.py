@@ -57,7 +57,7 @@ def get_wordlist(s):
 	        D.add(line.strip())
 	
 	
-	# list of permutations to go through
+	# list of permutations for the algorithm to go through
 	func = [c1,c2,c3,c4]
 	perm_list = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
 
