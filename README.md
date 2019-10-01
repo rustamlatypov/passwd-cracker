@@ -16,7 +16,7 @@ Built with Python 3.7.2 using
 • tqdm
 ```
 
-In `/scripts` use `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
+In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 
 - `attacktype` <br/>
 The attack type used, choices: `d:dictionary`, `h:hybrid`.
