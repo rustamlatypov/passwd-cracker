@@ -23,10 +23,7 @@ def c7(word): return "1" + word
 def c8(word): return "7" + word
 def c9(word): return word + word
 def c10(word): return word[::-1]
-
-def c11(word):
-    w =  word.replace('I','1')
-    return w.replace('i','1')
+def c11(word): return word.replace('I','1').replace('i','1')
 
 def c12(word):
     w = word.replace('E','3')
@@ -71,7 +68,7 @@ def get_wordlist(s):
 	
 	
 	# list of permutations to go through
-	func = [c1,c2,c3,c4,c5,c6,c7,c8]
+	func = [c1,c2,c3,c4,c5,c6,c11]
 	todo = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
 
 	# permutate every word in the .txt file
