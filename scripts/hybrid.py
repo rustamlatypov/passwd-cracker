@@ -1,13 +1,26 @@
 from itertools import combinations
+import string
 
-def c1(word): return word[:-1] + word[-1].upper()
-def c2(word): return word.capitalize()
-def c3(word): return word + "_0"
-def c4(word): return word + "_1"
-def c5(word): return word + "_7"
-def c6(word): return "0_" + word
-def c7(word): return "1_" + word
-def c8(word): return "7_" + word
+# toggle last character
+def c1(word): 
+	if word[-1].isupper():
+		return word[:-1] + word[-1].lower()
+	else:
+		return word[:-1] + word[-1].upper()
+
+# toggle first character
+def c2(word): 
+	if word[0].isupper():
+		return word[0].lower() + word[1:]
+	else:
+		return word[0].upper() + word[1:]
+
+def c3(word): return word + "0"
+def c4(word): return word + "1"
+def c5(word): return word + "7"
+def c6(word): return "0" + word
+def c7(word): return "1" + word
+def c8(word): return "7" + word
 def c9(word): return word + word
 def c10(word): return word[::-1]
 
@@ -27,7 +40,7 @@ def c14(word):
     w = word.replace('O', '0')
     return w.replace('o','0')
 
-# uppercase every even character
+# uppercase every odd character
 def c15(word):
     w = ''; i = 0
     for c in word:
@@ -37,7 +50,7 @@ def c15(word):
             w += c; i += 1
     return w
 
-# uppercase every odd character
+# uppercase every even character
 def c16(word):
     w = ''; i = 0
     for c in word:
@@ -56,20 +69,22 @@ def get_wordlist(s):
 	    for line in f:
 	        D.add(line.strip())
 	
+	
 	# list of permutations to go through
-	func = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16]
+	func = [c1,c2,c3,c4,c5,c6,c7,c8]
 	todo = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
 
 	# permutate every word in the .txt file
 	W = set()
 	for word in D:
-	    for comb in todo:
-	        temp = word
-	        if not comb:
-	            W.add(temp)
-	        for ac in comb:
-	            w = ac(temp)
-	            W.add(w)
+		for comb in todo:
+			temp = word
+			if not comb:
+				W.add(temp)
+			else:
+				for ac in comb:
+					temp = ac(temp)
+				W.add(temp)
 
 	return W
 
