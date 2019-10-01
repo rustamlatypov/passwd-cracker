@@ -4,7 +4,7 @@ Developed during October, 2019.
 
 ## Description
 
-A simple command-line interface for cracking passwords in parallel on the CPU. It is setup to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hashfunction, the salt position, modify attacks and write new ones.
+A simple command-line interface for cracking passwords in parallel on the CPU. It is set up to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hash function, the salt position, modify attacks and write new ones.
 
 If any passwords are found, they are printed along with the corresponding hash and salt, e.g., `tactlessness:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:35501f52a4652dea`.
 
@@ -31,7 +31,7 @@ The name of the .txt file in `/res` containing the password guesses on each line
 
 
 ## Parallelism
-Both sequential and parallel implementations are provided. Parallelism on the CPU is achieved using joblib. Using the parallel implementation makes sense when there is a lot of hashes to crack, otherwise the parallel overhead gets too high. Also, when handling large wordlists (~50M) the parallel implementations slow down and would require a better memory access pattern.
+Both sequential and parallel implementations are provided. Parallelism on the CPU is achieved using joblib. Using the parallel implementation makes sense when there is a lot of hashes to crack, otherwise the parallel overhead gets too high. Also, when handling large wordlists (~50M) the parallel implementations slows down and would require a better memory access pattern to work effectively.
 
 
 ## Author
