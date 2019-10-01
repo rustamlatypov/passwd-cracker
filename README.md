@@ -16,8 +16,8 @@ Built with Python 3.7.2 using
 ```
 • argparse
 • hashlib
-• tqdm
-• joblib
+• tqdm 4.36.1
+• joblib 0.13.2
 ```
 
 In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
