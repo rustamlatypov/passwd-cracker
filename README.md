@@ -1,4 +1,4 @@
-# SHA-256 password cracker 
+# Password cracker 
 
 Developed during October, 2019.
 
