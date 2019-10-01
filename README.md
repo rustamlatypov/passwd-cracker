@@ -4,7 +4,7 @@ Developed during October, 2019.
 
 ## Description
 
-A simple command-line interface for cracking passwords.
+A simple command-line interface for cracking passwords. It is setup to crack salted SHA256  passwords, . 
 
 ## Running
 
@@ -23,7 +23,7 @@ In `/scripts` use `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 - `wordfile` <br/>
 
 ## Remarks
-The scripts are easy to read and modify.
+The scripts are easy to read and modify. One can easily switch the hashfunction, the salt position, add different attack types and more.
 
 ## Author
 
