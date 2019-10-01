@@ -18,9 +18,11 @@ tqdm
 
 In `/scripts` use `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 
-- `attacktype` <br/>
-- `hashfile` <br/>
-- `wordfile` <br/>
+- `attacktype`:char <br/>
+
+- `hashfile`:str <br/>
+The name of the `.txt` file containing the salts and the hexadecimal representation of the hashes, e.g.,  ´35501f52a4652dea:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559´ , on each line.
+- `wordfile`:str <br/>
 
 ## Remarks
 The scripts are easy to read and modify. One can easily switch the hashfunction, the salt position, add different attack types and more.
