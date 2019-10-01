@@ -25,6 +25,7 @@ The name of the .txt file containing the salts and the hexadecimal representatio
 - `wordfile` <br/>
 The name of the .txt file containing the password guesses on each line. 
 
+A progressbar is shown and all found passwords are printed with the corresponding salt and hash, e.g., `35501f52a4652dea:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:tactlessness`.
 
 ## Author
 
