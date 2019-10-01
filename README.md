@@ -31,7 +31,7 @@ The name of the .txt file in `/res` containing the password guesses on each line
 
 
 ## Parallelism
-Both sequential and parallel implementations are provided. Parallelism on the CPU is achieved using `joblib`. Using the parallel impelementation make sense when there is a lot of hashes to crack, otherwise the parallel overhead gets too big. Also when handling large wordlists (~50M) the parallel implemetations slows down and would require a better memory access pattern.  
+Both sequential and parallel implementations are provided. Parallelism on the CPU is achieved using joblib. Using the parallel implementation makes sense when there is a lot of hashes to crack, otherwise the parallel overhead gets too big. Also, when handling large wordlists (~50M) the parallel implementations slow down and would require a better memory access pattern.
 
 
 ## Author
