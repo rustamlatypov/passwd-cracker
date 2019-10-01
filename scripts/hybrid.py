@@ -23,9 +23,9 @@ def c8(word): return "7" + word
 def c9(word): return word + word
 def c10(word): return word[::-1]
 def c11(word): return word.replace('I','1').replace('i','1')
-def c12(word): return word.replace('E','3')replace('e','3')
+def c12(word): return word.replace('E','3').replace('e','3')
 def c13(word): return word.replace('A','4').replace('a','4')
-def c14(word): return word.replace('O', '0').replace('o','0')
+def c14(word): return word.replace('O','0').replace('o','0')
 
 # uppercase every odd character
 def c15(word):
@@ -58,13 +58,13 @@ def get_wordlist(s):
 	
 	
 	# list of permutations to go through
-	func = [c1,c2,c3,c4,c5,c6,c11]
-	todo = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
+	func = [c1,c2,c3,c4]
+	perm_list = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
 
 	# permutate every word in the .txt file
 	W = set()
 	for word in D:
-		for comb in todo:
+		for comb in perm_list:
 			temp = word
 			if not comb:
 				W.add(temp)
