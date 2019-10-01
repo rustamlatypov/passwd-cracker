@@ -11,14 +11,7 @@ If any passwords are found, they are printed along with the corresponding hash a
 
 ## Running
 
-Built with Python 3.7.2 using
-
-```
-• argparse
-• hashlib
-• tqdm 4.36.1
-• joblib 0.13.2
-```
+Built with Python 3.7.2.
 
 In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 
