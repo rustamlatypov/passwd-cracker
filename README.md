@@ -1,3 +1,11 @@
 # SHA-256 password cracker 
 
-A simple command line tool for cracking salted SHA-256 passwords.
+Developed during October, 2019.
+
+## Description
+
+## Running
+
+## Author
+
+[Rustam Latypov](mailto:rustam.latypov@aalto.fi)

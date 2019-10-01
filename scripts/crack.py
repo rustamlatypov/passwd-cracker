@@ -1,19 +1,8 @@
 import argparse
 import hashlib
-import multiprocessing
-from joblib import Parallel, delayed
 from tqdm import tqdm
-
 import dictionary
 import hybrid
-
-
-
-def crack(i):
-    for s, h in H:
-        encrypted = hashlib.sha256((i+s).encode('utf-8')).hexdigest()
-        if encrypted == h:
-            print(s + ':' + h, i, '\n')
 
 
 
@@ -43,15 +32,22 @@ def main():
 
 
 	def crack(i):
-	    for s, h in H:
-	        encrypted = hashlib.sha256((i+s).encode('utf-8')).hexdigest()
-	        if encrypted == h:
-	            print(s + ':' + h, i, '\n')
+			for s, h in H:
+			    encrypted = hashlib.sha256((i+s).encode('utf-8')).hexdigest()
+			    if encrypted == h:
+			        print(s + ':' + h, i, '\n')
+
 
 
 	inputs = tqdm(W)
-	num_cores = multiprocessing.cpu_count()
-	processed_list = Parallel(n_jobs=num_cores)(delayed(crack)(i) for i in inputs)
+	for i in inputs:
+		crack(i) 
 
 
 main()
+
+
+
+
+
+
