@@ -4,7 +4,7 @@ Developed during October, 2019.
 
 ## Description
 
-A simple command-line interface for cracking passwords. It is setup to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hashfunction, the salt position, and write new attacks.
+A simple command-line interface for cracking passwords. It is setup to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hashfunction, the salt position, modify attacks and write new ones.
 
 ## Running
 
