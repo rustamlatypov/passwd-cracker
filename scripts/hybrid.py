@@ -1,5 +1,4 @@
 from itertools import combinations
-import string
 
 # toggle last character
 def c1(word): 
@@ -24,18 +23,9 @@ def c8(word): return "7" + word
 def c9(word): return word + word
 def c10(word): return word[::-1]
 def c11(word): return word.replace('I','1').replace('i','1')
-
-def c12(word):
-    w = word.replace('E','3')
-    return w.replace('e','3')
-
-def c13(word):
-    w = word.replace('A','4')
-    return w.replace('a','4')
-
-def c14(word):
-    w = word.replace('O', '0')
-    return w.replace('o','0')
+def c12(word): return word.replace('E','3')replace('e','3')
+def c13(word): return word.replace('A','4').replace('a','4')
+def c14(word): return word.replace('O', '0').replace('o','0')
 
 # uppercase every odd character
 def c15(word):
