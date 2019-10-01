@@ -25,7 +25,7 @@ In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 - `attacktype` <br/>
 The attack type used, choices: `d:dictionary`, `h:hybrid`.
 - `hashfile` <br/>
-The name of the .txt file in `/res` containing the hexadecimal representation of the hashes and the salts, e.g.,  `c1bc4ba2b8bfd40f753950d2fe7eccdb9ccc9bdf9940e2b5c5cc8492dd3a3023:c4fb88d80d448d9a`, on each line.
+The name of the .txt file in `/res` containing the hashes as a hexadecimal number and the salts, e.g.,  `c1bc4ba2b8bfd40f753950d2fe7eccdb9ccc9bdf9940e2b5c5cc8492dd3a3023:c4fb88d80d448d9a`, on each line.
 - `wordfile` <br/>
 The name of the .txt file in `/res` containing the password guesses on each line. 
 
