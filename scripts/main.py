@@ -43,7 +43,7 @@ def main():
 			        print(i + ':' + h + ':' + s, '\n')
 
 
-	# going through all of the guesses and hashes 
+	# creating a progress bar 
 	inputs = tqdm(W)
 
 	## Sequential
