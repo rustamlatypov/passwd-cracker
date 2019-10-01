@@ -38,9 +38,9 @@ def main():
 
 	def crack(i):
 			for h, s in H:
-			    encrypted = hashlib.sha256(('potPlantSalt'+i+s).encode('utf-8')).hexdigest()
-			    if encrypted[:32] == h:
-			        print(i + ':' + s + ':' + h, '\n')
+			    encrypted = hashlib.sha256((i+s).encode('utf-8')).hexdigest()
+			    if encrypted == h:
+			        print(i + ':' + h + ':' + s, '\n')
 
 
 	# going through all of the guesses and hashes 

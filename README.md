@@ -6,7 +6,7 @@ Developed during October, 2019.
 
 A simple command-line interface for cracking passwords in parallel on the CPU. It is set up to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hash function, the salt position, modify attacks and write new ones.
 
-If any passwords are found, they are printed along with the corresponding hash and salt, e.g., `tactlessness:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:35501f52a4652dea`.
+If any passwords are found, they are printed along with the corresponding hash and salt, e.g., `040904iloveth33:35501f52a4652dea:3e345983dd3a04d16301d78558b406c1bf03c1e413404ac254e10ef9a9db0235`.
 
 
 ## Running
@@ -25,7 +25,7 @@ In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 - `attacktype` <br/>
 The attack type used, choices: `d:dictionary`, `h:hybrid`.
 - `hashfile` <br/>
-The name of the .txt file in `/res` containing the hexadecimal representation of the hashes and the salts, e.g.,  `8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:35501f52a4652dea`, on each line.
+The name of the .txt file in `/res` containing the hexadecimal representation of the hashes and the salts, e.g.,  `3e345983dd3a04d16301d78558b406c1bf03c1e413404ac254e10ef9a9db0235:35501f52a4652dea`, on each line.
 - `wordfile` <br/>
 The name of the .txt file in `/res` containing the password guesses on each line. 
 
