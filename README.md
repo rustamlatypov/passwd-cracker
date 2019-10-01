@@ -11,9 +11,9 @@ A simple command-line interface for cracking passwords. It is setup to crack sal
 Built with Python 3.7.2 using
 
 ```
-argparse
-hashlib
-tqdm
+-argparse
+-hashlib
+-tqdm
 ```
 
 In `/scripts` use `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
