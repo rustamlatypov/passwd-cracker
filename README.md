@@ -6,7 +6,7 @@ Developed during October, 2019.
 
 A simple command-line interface for cracking passwords. It is setup to crack SHA256  passwords appended with salt using dictionary and hybrid attacks, but can be modified with minimal effort. One can easily change the hashfunction, the salt position, modify attacks and write new ones.
 
-If any passwords are found, they are printed along with the corresponding salt and hash, e.g., `tactlessness:35501f52a4652dea:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559`.
+If any passwords are found, they are printed along with the corresponding hash and salt, e.g., `tactlessness:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:35501f52a4652dea`.
 
 
 ## Running
@@ -24,7 +24,7 @@ In `/scripts` run `python3 main.py <attacktype> <hashfile> <wordfile>`. <br/>
 - `attacktype` <br/>
 The attack type used, choices: `d:dictionary`, `h:hybrid`.
 - `hashfile` <br/>
-The name of the .txt file in `/res` containing the salts and the hexadecimal representation of the hashes, e.g.,  `35501f52a4652dea:8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559`, on each line.
+The name of the .txt file in `/res` containing the salts and the hexadecimal representation of the hashes, e.g.,  `8071430e01f99174e749b5787328f900ce6343c330ba607ebb4fbc5c8b15a559:35501f52a4652dea`, on each line.
 - `wordfile` <br/>
 The name of the .txt file in `/res` containing the password guesses on each line. 
 
