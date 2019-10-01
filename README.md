@@ -4,7 +4,7 @@ Developed during October, 2019.
 
 ## Description
 
-A simple command-line interface for cracking passwords. It is setup to crack salted SHA256  passwords, . 
+A simple command-line interface for cracking passwords. It is setup to crack salted SHA256  passwords with dictionary and hybrid attacks, but can be easily modified. One can easily change the hashfunction, the salt position, add write new attack types.
 
 ## Running
 
@@ -25,8 +25,6 @@ The name of the `.txt` file containing the salts and the hexadecimal representat
 - `wordfile`: str <br/>
 The name of the `.txt` file containing the password guesses on each line. 
 
-## Remarks
-The scripts are easy to read and modify. One can easily switch the hashfunction, the salt position, add different attack types and more.
 
 ## Author
 
