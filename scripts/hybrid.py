@@ -2,17 +2,19 @@ from itertools import combinations
 
 # toggle last character
 def c1(word): 
-	if word[-1].isupper():
-		return word[:-1] + word[-1].lower()
-	else:
-		return word[:-1] + word[-1].upper()
+    if len(word)<=1: return word
+    if word[-1].isupper():
+        return word[:-1] + word[-1].lower()
+    else:
+        return word[:-1] + word[-1].upper()
 
 # toggle first character
 def c2(word): 
-	if word[0].isupper():
-		return word[0].lower() + word[1:]
-	else:
-		return word[0].upper() + word[1:]
+    if len(word)<=1: return word
+    if word[0].isupper():
+        return word[0].lower() + word[1:]
+    else:
+        return word[0].upper() + word[1:]
 
 def c3(word): return word + "0"
 def c4(word): return word + "1"
@@ -50,30 +52,29 @@ def c16(word):
 
 def get_wordlist(s):
 
-	# going through the .txt file
-	D = set()
-	with open(s, encoding='latin-1') as f:
-	    for line in f:
-	        D.add(line.strip())
-	
-	
-	# list of permutations for the algorithm to go through
-	func = [c1,c2,c3,c4]
-	perm_list = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
+    # going through the .txt file
+    D = set()
+    with open(s, encoding='latin-1') as f:
+        for line in f:
+            D.add(line.strip())
+            
+    # list of permutations for the algorithm to go through
+    func = [c1,c2,c3,c4]
+    perm_list = sum([list(map(list, combinations(func, i))) for i in range(len(func) + 1)], [])
 
-	# permutate every word in the .txt file
-	W = set()
-	for word in D:
-		for comb in perm_list:
-			temp = word
-			if not comb:
-				W.add(temp)
-			else:
-				for ac in comb:
-					temp = ac(temp)
-				W.add(temp)
+    # permutate every word in the .txt file
+    W = set()
+    for word in D:
+        for comb in perm_list:
+            temp = word
+            if not comb:
+                W.add(temp)
+            else:
+                for ac in comb:
+                    temp = ac(temp)
+                W.add(temp)
 
-	return W
+    return W
 
 
 
