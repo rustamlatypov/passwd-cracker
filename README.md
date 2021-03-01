@@ -4,7 +4,7 @@ Developed during October, 2019.
 
 ## Description
 
-A command-line interface for cracking passwords in parallel on CPU. It is set up to crack SHA256 passwords appended with salt using dictionary and hybrid attacks. The code can be modified with minimal effort. One can easily change the hash function, the salt position, modify attacks and write new ones.
+A command-line tool for cracking passwords in parallel on CPU. It is set up to crack SHA256 passwords appended with salt using dictionary and hybrid attacks. The code can be modified with minimal effort. One can easily change the hash function, the salt position, modify attacks and write new ones.
 
 If any passwords are found, they are printed along with the corresponding hash and salt, e.g., `GlumifloraE1:50634e432b26e49e8146fb1d83f3e6918e42e2fecb1024238f2ad9cd0da0cd33:732271f0d8517cf2`.
 
